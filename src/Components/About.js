@@ -1,48 +1,81 @@
-import React,{useState} from 'react'
-import PropTypes from 'prop-types'
-import {Route} from 'react-router-dom'
+import React from 'react'
+
 
 export default function About(props) {
   
   return (
-    
-    <div class="accordion" id="accordionExample"  data-bs-theme={props.mo}>
-  <div class="accordion-item">
+    <>
+    <div class="container">
+      <h1>About this Website</h1>
+      <p>TextUtils is a ReactJs website built primarily to do various operations on regular typed text. 
+        You can safely use WordPad or NotePad for text drafting, and saving, but TextUtils offers much more than simple text drafting and formatting.
+        TextUtils  can convert your text to any case in just one simple click of a button. 
+        It has an improved property of  reversal of your inputted text,and wear up your earphones to listen to it, instead of straining your eyes.You can even remove extra spaces from your text. It does a detailed analyzing of your text, and provides an output of words, and characters, along with reading time as well. The best part of TextUtils is that it is an open source project, as a result, dozens of new features are in the upcoming, which definitely makes it a cut above the rest. </p>
+    </div>
+    <div class="accordion" id="accordionExample"  data-bs-theme={props.mo} style={{paddingBottom:'40vw'}}>
+    <div class="accordion-item">
     <h2 class="accordion-header">
-      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-        Accordion Item #1
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseone" aria-expanded="false" aria-controls="collapseone">
+      <strong> How to Use this Website</strong> 
       </button>
     </h2>
-    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+    <div id="collapseone" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
       <div class="accordion-body">
-        <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+       You have to enter the text first in the textarea and then u can perform the operation upon your requirement.
       </div>
     </div>
   </div>
   <div class="accordion-item">
     <h2 class="accordion-header">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-        Accordion Item #2
+      <strong> Price to Use this Website</strong> 
       </button>
     </h2>
     <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
       <div class="accordion-body">
-        <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+        This website is free to use and also more safe to use no credits required
       </div>
     </div>
   </div>
   <div class="accordion-item">
     <h2 class="accordion-header">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-        Accordion Item #3
+      <strong>Browser Compatibality</strong> 
       </button>
     </h2>
     <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
       <div class="accordion-body">
-        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+        U can use this website in any website and on any device
       </div>
     </div>
   </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsefour" aria-expanded="false" aria-controls="collapsefour">
+      <strong>What does Play button do</strong> 
+      </button>
+    </h2>
+    <div id="collapsefour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+       Once u Click on the button Play You can listen the text that entered in the textarea.After the Clicking on the Play button two news button will appear they are Pause and Stop button.
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsefive" aria-expanded="false" aria-controls="collapsefive">
+      <strong>Contact</strong> 
+      </button>
+    </h2>
+    <div id="collapsefive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+       Email:saigannu08@gmail.com
+      </div>
+    </div>
+  </div>
+  
 </div>
+</>
   )
 }
+
