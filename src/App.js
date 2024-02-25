@@ -1,5 +1,5 @@
-import logo from './logo.svg';
 import './App.css';
+import Footer from './Components/Footer.js'
 import Navbar from './Components/Navbar.js'
 import Text from'./Components/Text.js'
 import React, {useState,useEffect} from 'react'
@@ -10,10 +10,10 @@ import {Routes,Route} from "react-router-dom";
 function App() {
   const [m,setm]=useState('light');
   const [m1,setm1]=useState('light');
-  const toogleMode=()=>{
+  const toogleMode=()=>{ // To convert light ot dark and dark to light mode
     //document.body.classList.add('bg-'+cls);
     bgremove();
-    if(m1=='light'){
+    if(m1==='light'){
       setm('dark');
       setm1('dark');
       showalt("Dark Mode Enabled","Success");
@@ -22,13 +22,14 @@ function App() {
       setm1('light');
       showalt("Light Mode Enabled","Success");
     }
+
   }
-  useEffect(() => {
-    document.body.style.backgroundColor =m=='dark'?'#022343':'white'
-    document.body.style.color=m=='dark'?'white':'black'
+  useEffect(() => {// convertions light and dark mode
+    document.body.style.backgroundColor =m==='dark'?'#022343':'white'
+    document.body.style.color=m==='dark'?'white':'black'
 });
 const [alt,setalt]=useState(null);
-const showalt=(message,type)=>{
+const showalt=(message,type)=>{// pop up messages
        setalt({
         msg:message,
         type:type
@@ -37,7 +38,7 @@ const showalt=(message,type)=>{
              setalt(null);
        },2500);
 }
-const bgremove=()=>{
+const bgremove=()=>{// color palette removal
   document.body.classList.remove('bg-primary');
 document.body.classList.remove('bg-light');
  document.body.classList.remove('bg-dark');
@@ -47,10 +48,10 @@ document.body.classList.remove('bg-light');
   setm('light');
   
 }
-const tg=(cls)=>{
+const tg=(cls)=>{// color palette adder
   bgremove();
     document.body.classList.add('bg-'+cls);
-    if(cls=='light'){
+    if(cls==='light'){
       setm('light');
     }else{
     setm('dark');
@@ -64,6 +65,7 @@ const tg=(cls)=>{
    <div>
    
    <Navbar title="TextUtilis" mode={m} toogleMode={toogleMode} tg={tg}/>
+   
    {/*here we used the variable above title */}
    <Alert alert={alt}/>
    
@@ -85,7 +87,7 @@ const tg=(cls)=>{
    
      
    </div>
-   
+   <Footer/>
    </>
   );
 }
